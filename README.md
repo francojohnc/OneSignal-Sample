@@ -1,2 +1,2 @@
 # OneSignal-Sample
-onesignal.com is alternative of parce for push notification 
+onesignal.com is alternative of parse.com for push notification 
