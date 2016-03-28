@@ -26,7 +26,7 @@ public class BaseApplication extends Application {
                 if (additionalData != null) {
                     if (additionalData.has("actionSelected"))
                         Log.e(TAG, "OneSignal notification button with id " + additionalData.getString("actionSelected") + " pressed");
-                    Log.d(TAG, "Full additionalData:\n" + additionalData.toString());
+                    Log.e(TAG, "Full additionalData:\n" + additionalData.toString());
                 }
             } catch (Throwable t) {
                 t.printStackTrace();
