@@ -3,6 +3,8 @@ package com.apkmarvel.onesignalsample;
 import android.app.Application;
 import android.util.Log;
 
+import com.apkmarvel.onesignalsample.onesignal.OneSignalNotification;
+import com.apkmarvel.onesignalsample.onesignal.UtilOneSignal;
 import com.onesignal.OneSignal;
 
 import org.json.JSONObject;
@@ -15,7 +17,8 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Log.e(TAG, "onCreate");
-        OneSignal.startInit(this).setNotificationOpenedHandler(new ExampleNotificationOpenedHandler()).init();
+        UtilOneSignal.init(this,new OneSignalNotification());
+        UtilOneSignal.sendTag("SampleKey","new data");
     }
 
     // This fires when a notification is opened by tapping on it or one is received while the app is running.
@@ -27,6 +30,7 @@ public class BaseApplication extends Application {
                     if (additionalData.has("actionSelected"))
                         Log.e(TAG, "OneSignal notification button with id " + additionalData.getString("actionSelected") + " pressed");
                     Log.e(TAG, "Full additionalData:\n" + additionalData.toString());
+
                 }
             } catch (Throwable t) {
                 t.printStackTrace();
