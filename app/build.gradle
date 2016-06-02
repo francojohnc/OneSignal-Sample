@@ -5,9 +5,8 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        manifestPlaceholders = [manifestApplicationId: "${applicationId}",
-                                onesignal_app_id: "5db740ab-2099-47bd-9f43-26a773de0874",
-                                onesignal_google_project_number: "241618419236"]
+        /*onesignal*/
+        manifestPlaceholders = [manifestApplicationId: "${applicationId}",onesignal_app_id: "5db740ab-2099-47bd-9f43-26a773de0874",onesignal_google_project_number: "241618419236"]
         applicationId "com.apkmarvel.onesignalsample"
         minSdkVersion 15
         targetSdkVersion 23

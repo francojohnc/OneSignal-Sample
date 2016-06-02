@@ -20,21 +20,4 @@ public class BaseApplication extends Application {
         UtilOneSignal.init(this,new OneSignalNotification());
         UtilOneSignal.sendTag("SampleKey","new data");
     }
-
-    // This fires when a notification is opened by tapping on it or one is received while the app is running.
-    private class ExampleNotificationOpenedHandler implements OneSignal.NotificationOpenedHandler {
-        @Override
-        public void notificationOpened(String message, JSONObject additionalData, boolean isActive) {
-            try {
-                if (additionalData != null) {
-                    if (additionalData.has("actionSelected"))
-                        Log.e(TAG, "OneSignal notification button with id " + additionalData.getString("actionSelected") + " pressed");
-                    Log.e(TAG, "Full additionalData:\n" + additionalData.toString());
-
-                }
-            } catch (Throwable t) {
-                t.printStackTrace();
-            }
-        }
-    }
 }
