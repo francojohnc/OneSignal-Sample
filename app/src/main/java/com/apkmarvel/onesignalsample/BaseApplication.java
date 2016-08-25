@@ -5,9 +5,6 @@ import android.util.Log;
 
 import com.apkmarvel.onesignalsample.onesignal.OneSignalNotification;
 import com.apkmarvel.onesignalsample.onesignal.UtilOneSignal;
-import com.onesignal.OneSignal;
-
-import org.json.JSONObject;
 
 /*https://documentation.onesignal.com/v2.0/docs/android-studio-sdk-installation*/
 public class BaseApplication extends Application {

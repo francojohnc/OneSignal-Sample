@@ -12,6 +12,11 @@ public class UtilOneSignal {
         OneSignal.startInit(context).setNotificationOpenedHandler(handler).init();
         OneSignal.enableNotificationsWhenActive(true);
     }
+
+    public static void init(Context context){
+        OneSignal.startInit(context).init();
+        OneSignal.enableNotificationsWhenActive(true);
+    }
     public static void sendTag(String key, String value){
         OneSignal.sendTag(key, value);
     }
