@@ -8,14 +8,17 @@ import com.onesignal.OneSignal;
  * Created by JCF on 5/31/2016.
  */
 public class UtilOneSignal {
+
     public static void init(Context context,OneSignal.NotificationOpenedHandler handler){
-        OneSignal.startInit(context).setNotificationOpenedHandler(handler).init();
-        OneSignal.enableNotificationsWhenActive(true);
+//        OneSignal.startInit(context).setNotificationOpenedHandler(handler).init();
+//        OneSignal.enableNotificationsWhenActive(true);
+        OneSignal.startInit(context).inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification).init();
+
     }
 
     public static void init(Context context){
         OneSignal.startInit(context).init();
-        OneSignal.enableNotificationsWhenActive(true);
+//        OneSignal.enableNotificationsWhenActive(true);
     }
     public static void sendTag(String key, String value){
         OneSignal.sendTag(key, value);

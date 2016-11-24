@@ -9,19 +9,7 @@
     android:weightSum="10"
     android:orientation="horizontal"
     android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_weight="5"
-        android:src="@mipmap/ic_launcher"
-        android:adjustViewBounds="true"
-        android:layout_height="wrap_content" />
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_weight="5"
-        android:src="@mipmap/ic_launcher"
-        android:adjustViewBounds="true"
-        android:layout_height="wrap_content" />
 </LinearLayout>
 
 

@@ -14,6 +14,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Log.e(TAG, "onCreate");
+
         UtilOneSignal.init(this,new OneSignalNotification());
         UtilOneSignal.sendTag("SampleKey","new data");
     }
