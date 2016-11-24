@@ -25,11 +25,11 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.1'
-    // Required for OneSignal, even if you have added FCM.
+    // Required for OneSignal
     compile 'com.google.android.gms:play-services:9.2.1'
     /*onesignal*/
     compile 'com.onesignal:OneSignal:3.+@aar'
     // Required for geotagging
-    compile "com.google.android.gms:play-services-location:+"
+    compile "com.google.android.gms:play-services-location:9.2.1"
 }
 
